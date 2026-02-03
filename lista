@@ -1,0 +1,38 @@
+nomes = []
+
+while True:
+    print("\n=== MENU ===")
+    print("1 - Adicionar nome")
+    print("2 - Ver nomes")
+    print("3 - Remover nome")
+    print("4 - Sair")
+
+    opcao = input("Escolha uma opção: ")
+
+    if opcao == "1":
+        nome = input("Digite o nome para adicionar: ")
+        nomes.append(nome)
+        print("Nome adicionado com sucesso!")
+
+    elif opcao == "2":
+        if len(nomes) == 0:
+            print("Nenhum nome na lista.")
+        else:
+            print("Lista de nomes:")
+            for n in nomes:
+                print("-", n)
+
+    elif opcao == "3":
+        nome = input("Digite o nome que deseja remover: ")
+        if nome in nomes:
+            nomes.remove(nome)
+            print("Nome removido!")
+        else:
+            print("Nome não encontrado.")
+
+    elif opcao == "4":
+        print("Saindo do sistema...")
+        break
+
+    else:
+        print("Opção inválida!")
